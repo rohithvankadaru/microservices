@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring-cloud-config-server" />
+        <module name="Naming-Service" />
+        <module name="APIGateWay" />
+        <module name="currency-exchange" />
+        <module name="currency-conversion" />
+        <module name="limits-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="." target="19" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="APIGateWay" options="-parameters" />
+      <module name="Naming-Service" options="-parameters" />
+      <module name="Spring-cloud-config-server" options="-parameters" />
+      <module name="currency-conversion" options="-parameters" />
+      <module name="currency-exchange" options="-parameters" />
+      <module name="limits-service" options="-parameters" />
+    </option>
+  </component>
+</project>

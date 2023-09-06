@@ -1,0 +1,52 @@
+<--------------Currency Exchange-------------->
+URL
+http://localhost:8000/currency-exchange/from/USD/to/INR
+
+Response Structure
+{
+   "id":10001,
+   "from":"USD",
+   "to":"INR",
+   "conversionMultiple":65.00,
+   "environment":"8000 instance-id"
+}
+<-------------------------------------------------------------------------------------------------------------------------->
+
+<---------------Currency Conversion-------------->
+URL
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+Response Structure
+{
+  "id": 10001,
+  "from": "USD",
+  "to": "INR",
+  "conversionMultiple": 65.00,
+  "quantity": 10,
+  "totalCalculatedAmount": 650.00,
+  "environment": "8000 instance-id"
+}
+<-------------------------------------------------------------------------------------------------------------------------->
+<---------------Eureka : 8761------------------------>
+
+<-------------APIGateway : 8765------------------------>
+localhost:8765/CURRENCY-CONVERSION-SERVICE/currency-conversion/from/USD/to/INR/quantity/10
+localhost:8765/CURRENCY-CONVERSION-SERVICE/currency-conversion-feign/from/USD/to/INR/quantity/10
+localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+
+
+LOWER CASE
+localhost:8765/currency-conversion-service/currency-conversion/from/USD/to/INR/quantity/10
+localhost:8765/currency-conversion-service/currency-conversion-feign/from/USD/to/INR/quantity/10
+localhost:8765/currency-exchange/currency-exchange/from/USD/to/INR
+
+
+localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+localhost:8765/currency-exchange/from/USD/to/INR
+
+
+
+
+
